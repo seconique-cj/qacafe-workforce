@@ -4,6 +4,7 @@ on:
   push:
     branches:
       - main
+      - CJ
   pull_request:
     branches:
       - main
