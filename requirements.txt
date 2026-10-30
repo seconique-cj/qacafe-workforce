@@ -1,4 +1,4 @@
 Flask==3.1.1
 flake8==7.3.0
 pytest==7.4.2
-playright==1.38.0
+playwright==1.64.1
