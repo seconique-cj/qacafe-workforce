@@ -44,4 +44,14 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      # TODO: Zip the application here
+      - name: Zip application
+        run: |
+          zip -r qacafe-workforce.zip \
+            app.py database.py requirements.txt templates database
+
+      - name: Upload application archive
+        uses: actions/upload-artifact@v4
+        with:
+          name: qacafe-workforce
+          path: qacafe-workforce.zip
+          if-no-files-found: error
